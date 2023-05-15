@@ -1,0 +1,206 @@
+
+/* top nav */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #616161;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* tabel */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: rgb(250, 250, 250);
+}
+
+.btn-detail a,
+button a{
+    text-decoration: none;
+    color: #000;
+}
+
+/*form*/
+
+.create-user-container{
+    background-image: linear-gradient(to bottom, #a8f9db, #38f1ad);
+    /* background-color: #94f5d1; */
+    padding: 16px;
+    margin: 40px 100px 0 0;
+    width: 400px;
+    border-radius: 10px;
+    border: 1px solid #cbcbcb;
+    box-shadow: 0px 0px 10px 5px #c6c6c6;
+}
+
+.form-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+.inputbox {
+    position: relative;
+    width: 25rem;
+    border-bottom: #fff solid 2px;
+}
+
+.inputbox {
+    margin-top: 16px;
+}
+
+.inputbox label {
+    position: absolute;
+    left: 5px;
+    transform: translateY(50%);
+    color: #333;
+    pointer-events: none;
+    font-size: 12px;
+    opacity: 0.6;
+    transition: all 0.5s ease;
+}
+
+input:focus~label,
+input:valid~label {
+    transform: translateY(-50%);
+    font-size: 15px;
+    opacity: 1;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #333;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.btn button {
+    margin-right: 10px;
+}
+
+.btn-delete, .btn-edit, .btn-cancel{
+    transform: translateY(38%);
+}
+
+
+/* CSS btn */
+.btn-add {
+    margin-top: 30px;
+    width: 100%;
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.btn-add:active{
+    opacity: 0.9;
+}
+
+.btn-add:before {
+    content: "";
+    background: linear-gradient(45deg,
+            #ff0000,
+            #ff7300,
+            #fffb00,
+            #48ff00,
+            #00ffd5,
+            #002bff,
+            #7a00ff,
+            #ff00c8,
+            #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.btn-add:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+

@@ -1,0 +1,2 @@
+// mô hình MVC: user -> routing -> controller <-> model(web) <-> db
+//                                 -> view -> user
